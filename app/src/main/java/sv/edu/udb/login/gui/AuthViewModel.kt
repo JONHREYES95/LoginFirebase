@@ -43,14 +43,14 @@ import androidx.compose.ui.Modifier
 import sv.edu.udb.login.R
 
 class AuthViewModel : ViewModel() {
-    private val auth: FirebaseAuth = FirebaseAuth.getInstance() // Especificar tipo es buena práctica
+    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
     private lateinit var googleSignInClient: GoogleSignInClient
 
     // Usamos Unauthenticated como estado inicial en lugar de Idle para simplificar
     private val _authState = MutableStateFlow<AuthState>(AuthState.Unauthenticated)
     val authState: StateFlow<AuthState> = _authState.asStateFlow() // Usa asStateFlow para exponerlo
 
-    // --- Inicialización de Google Sign-In (ya existente) ---
+    // --- Inicialización de Google Sign-In ---
     fun initializeGoogleSignInClient(clientId: String, context: Context) {
         // Asegúrate de que solo se inicialice una vez si es necesario,
         // aunque llamarlo múltiples veces con el mismo context y gso es seguro.
@@ -64,7 +64,7 @@ class AuthViewModel : ViewModel() {
         }
     }
 
-    // --- Lógica de Google Sign-In (ya existente) ---
+    // --- Lógica de Google Sign-In  ---
     fun signInWithGoogle(launcher: androidx.activity.result.ActivityResultLauncher<Intent>) {
         // Asegúrate de que el cliente esté inicializado antes de intentar usarlo
         if (!::googleSignInClient.isInitialized) {
@@ -73,7 +73,7 @@ class AuthViewModel : ViewModel() {
         }
         val signInIntent = googleSignInClient.signInIntent
         launcher.launch(signInIntent)
-        _authState.value = AuthState.Loading("Iniciando sesión con Google...") // Mensaje opcional
+        _authState.value = AuthState.Loading("Iniciando sesión con Google...") 
     }
 
     fun handleSignInResult(data: Intent?) {
@@ -125,7 +125,7 @@ class AuthViewModel : ViewModel() {
 
     // --- !!! FUNCIÓN AÑADIDA PARA EMAIL/PASSWORD !!! ---
     fun signInWithEmailPassword(email: String, password: String) {
-        // Validaciones básicas (puedes añadir más)
+        // Validaciones básicas
         if (email.isBlank() || password.isBlank()) {
             _authState.value = AuthState.Error("Correo electrónico y contraseña no pueden estar vacíos.")
             return
@@ -175,7 +175,7 @@ class AuthViewModel : ViewModel() {
     }
 
 
-    // --- Función auxiliar para establecer errores (ya existente) ---
+    // --- Función auxiliar para establecer errores  ---
     fun setError(message: String) {
         _authState.value = AuthState.Error(message)
     }
