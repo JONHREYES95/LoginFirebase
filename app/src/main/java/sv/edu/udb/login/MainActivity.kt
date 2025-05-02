@@ -14,7 +14,7 @@ import sv.edu.udb.login.gui.Panel.AppScaffold
 import sv.edu.udb.login.gui.UserViewModel
 import sv.edu.udb.login.gui.Panel.HomeScreen.HomeScreen
 import sv.edu.udb.login.ui.theme.LoginTheme
-import sv.edu.udb.login.gui.AuthViewModel // Asegúrate de importar AuthViewModel si lo usas aquí
+import sv.edu.udb.login.gui.AuthViewModel 
 import sv.edu.udb.login.gui.LoginScreen
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 fun LoginApp() {
     val navController = rememberNavController()
     val userViewModel: UserViewModel = viewModel()
-    val authViewModel: AuthViewModel = viewModel() // Obtén el AuthViewModel aquí si lo necesitas en MainActivity
+    val authViewModel: AuthViewModel = viewModel() 
 
     LoginTheme {
         NavHost(navController = navController, startDestination = "login") {
