@@ -15,7 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import sv.edu.udb.login.ui.theme.LoginTheme
 
-// Define una data class para representar cada función del panel
+// data class para representar cada función del panel
 data class AdminFunction(val title: String, val icon: ImageVector, val onClick: () -> Unit)
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -23,7 +23,7 @@ data class AdminFunction(val title: String, val icon: ImageVector, val onClick: 
 fun HomeScreen(paddingValues: PaddingValues) {
     val scrollState = rememberScrollState()
 
-    // Define las funciones del panel de administración
+    // funciones del panel de administración
     val adminFunctions = listOf(
         AdminFunction("Crear Evento", Icons.Filled.AddCircle, { /* TODO: Implementar Crear Evento */ }),
         AdminFunction("Ver Eventos", Icons.Filled.DateRange, { /* TODO: Implementar Ver Eventos */ }),
@@ -33,7 +33,6 @@ fun HomeScreen(paddingValues: PaddingValues) {
         AdminFunction("Calificaciones", Icons.Filled.CheckCircle, { /* TODO: Implementar Calificaciones */ }),
         AdminFunction("Compartir Evento", Icons.Filled.Share, { /* TODO: Implementar Compartir Evento */ }),
         AdminFunction("Gestionar Usuarios", Icons.Filled.Person, { /* TODO: Implementar Gestión de Usuarios */ }),
-        // Puedes agregar más funciones aquí
     )
 
     Column(
@@ -99,8 +98,6 @@ fun AdminFunctionItem(function: AdminFunction) {
 @Composable
 fun HomeScreenPreview() {
     LoginTheme {
-        // Para la preview de HomeScreen, podrías pasar un UserViewModel simulado si lo necesitas
-        // o simplemente no usarlo si la preview no depende de él directamente.
         HomeScreen(paddingValues = PaddingValues())
     }
 }
