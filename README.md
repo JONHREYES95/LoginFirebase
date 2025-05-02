@@ -39,6 +39,7 @@ app/
 ├── build.gradle.kts
 ├── google-services.json
 └── ...
+
 ## Configuración y ejecución
 
 1. **Clona el repositorio:**
