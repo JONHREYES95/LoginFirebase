@@ -4,6 +4,10 @@
 
 LoginFirebase es un proyecto de ejemplo que demuestra cómo implementar autenticación de usuarios utilizando Firebase Authentication en una aplicación Android moderna desarrollada con Jetpack Compose. El objetivo principal es mostrar la integración de Firebase para el inicio de sesión y la gestión de usuarios, aprovechando las ventajas de Compose para la construcción de interfaces de usuario reactivas y declarativas.
 
+## Video explicativo de la aplicacion (solo funcionalidad).
+
+https://drive.google.com/file/d/150kkYGzzWMd9LrDy1tr5iX9w7nCinrDK/view?usp=sharing
+
 ## Características
 
 - **Inicio de sesión con correo electrónico y contraseña** usando Firebase Authentication.
