@@ -41,7 +41,10 @@ LoginFirebase es un proyecto de ejemplo que demuestra cómo implementar autentic
 - Asegúrate de tener configurado un proyecto en Firebase Console y habilitado el método de autenticación por correo y contraseña.
 - El archivo google-services.json debe corresponder a tu propio proyecto de Firebase si deseas personalizar la autenticación.
 ## Capturas de pantalla
-*****************
+****************************************
+![image](https://github.com/user-attachments/assets/d7223931-1c2a-45ca-ad72-b0930ae54724)
+![image](https://github.com/user-attachments/assets/7ae3e7f7-7722-47d4-ab05-2773690760fc)
+****************************************
 ## Conclusiones
 Este proyecto demuestra cómo integrar de manera sencilla y efectiva Firebase Authentication en una app Android moderna utilizando Jetpack Compose, siguiendo buenas prácticas de arquitectura y diseño de interfaces.
 
