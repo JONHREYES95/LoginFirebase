@@ -24,21 +24,8 @@ LoginFirebase es un proyecto de ejemplo que demuestra cómo implementar autentic
 
 ## Estructura del proyecto
 
-app/
-├── src/
-│   ├── main/
-│   │   ├── java/sv/edu/udb/login/
-│   │   │   ├── MainActivity.kt
-│   │   │   └── gui/
-│   │   │       └── AuthViewModel.kt
-│   │   └── res/
-│   │       ├── layout/
-│   │       ├── values/
-│   │       └── drawable/
-│   └── test/
-├── build.gradle.kts
-├── google-services.json
-└── ...
+![image](https://github.com/user-attachments/assets/8b76782c-0ad6-4f34-b9b5-68222663c38c)
+
 
 ## Configuración y ejecución
 
